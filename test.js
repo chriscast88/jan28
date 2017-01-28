@@ -15,13 +15,16 @@ var imageInfo = [
 
 
 var describeImage = function (imageInfo){
-
+  var allNames = '';
   for (var i =0; i<imageInfo.length; i++){
-    var allNames += imageInfo[i].name;
+    allNames += imageInfo[i].name;
+    // this won't work since we're using a varible at the same time/before declaring it
+    // eg: var thing = thing + 1
+    // thing on the right side has not yet been defined
   }
   return allNames;
 }
 
 
-describeImage(imageInfo)
-// var finalInfo = describeImage(imageInfo);
+// describeImage(imageInfo)
+var finalInfo = describeImage(imageInfo);
